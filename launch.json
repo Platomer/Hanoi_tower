@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Program",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}", // Zmień na nazwę twojego pliku wykonywalnego
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,  // To otwiera program w zewnętrznym terminalu
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",  // Ścieżka do GDB
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build", // Jeśli masz ustawione zadania kompilacji
+            "postDebugTask": "",
+            "internalConsoleOptions": "neverOpen" // Opcjonalnie, aby wewnętrzny terminal się nie otwierał
+        }
+    ]
+}
